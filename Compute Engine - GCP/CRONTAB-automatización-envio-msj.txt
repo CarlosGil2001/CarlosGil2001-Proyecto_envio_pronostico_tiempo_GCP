@@ -1,0 +1,7 @@
+-- Utilizamos CRONTAB para realizar la programación de ejecución de tareas
+
+-- En la carpeta de los script, agregamos el siguiente codigo para que lo ejecute todos los días a las 15:00
+-- A su vez generará un archivo "stats_script.log" con la información de la ejecución
+
+$ crontab -e
+0 15 * * * /usr/bin/python3 /home/carlos/Datos/Proyecto_Envío_Pronostico_Tiempo_GCP/Twilio/twilio_script.py >> /home/carlos/Datos/Proyecto_Envío_Pronostico_Tiempo_GCP/Twilio/stats_script.log 2>&1
